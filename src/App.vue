@@ -38,7 +38,43 @@ onMounted(() => {
           <p>고객 연락·보장분석·청구를<br>한곳에서 챙겨요</p>
           <a class="btn main" href="https://bodiary.com" target="_blank" rel="noopener">BODA 바로가기 →</a>
         </div>
-        <div class="shot up"></div>
+        <div class="shot up">
+          <!-- 고객 카드 세 장이 겹친 모양. 이름 대신 막대라 실제 고객 정보 없음 -->
+          <svg viewBox="0 0 400 300" aria-hidden="true">
+            <defs>
+              <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#191f28" flood-opacity=".08" />
+              </filter>
+            </defs>
+            <g filter="url(#sh)">
+              <g transform="rotate(-8 200 150)">
+                <rect x="100" y="18" width="240" height="140" rx="18" fill="#fff" />
+                <circle cx="134" cy="50" r="15" fill="#e5e8eb" />
+                <rect x="158" y="44" width="80" height="9" rx="4.5" fill="#d1d6db" />
+              </g>
+              <g transform="rotate(-4 200 150)">
+                <rect x="85" y="52" width="250" height="145" rx="18" fill="#fff" />
+                <circle cx="120" cy="86" r="16" fill="#e5e8eb" />
+                <rect x="146" y="78" width="86" height="9" rx="4.5" fill="#b0b8c1" />
+                <rect x="146" y="94" width="56" height="7" rx="3.5" fill="#e5e8eb" />
+              </g>
+              <g>
+                <rect x="70" y="112" width="260" height="150" rx="18" fill="#fff" />
+                <circle cx="110" cy="152" r="18" fill="#e8f0f8" />
+                <circle cx="110" cy="147" r="7" fill="#004b8b" opacity=".35" />
+                <rect x="140" y="141" width="90" height="10" rx="5" fill="#333d4b" />
+                <rect x="140" y="159" width="60" height="8" rx="4" fill="#d1d6db" />
+                <rect x="246" y="139" width="66" height="24" rx="12" fill="#e8f0f8" />
+                <text x="279" y="155" text-anchor="middle" font-size="11" font-weight="700" fill="#004b8b">생일 D-3</text>
+                <line x1="90" y1="189" x2="310" y2="189" stroke="#f2f4f6" stroke-width="2" />
+                <rect x="90" y="207" width="130" height="8" rx="4" fill="#e5e8eb" />
+                <rect x="90" y="223" width="90" height="8" rx="4" fill="#e5e8eb" />
+                <rect x="250" y="209" width="62" height="32" rx="10" fill="#004b8b" />
+                <text x="281" y="229" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">연락</text>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
     </section>
 
@@ -119,6 +155,7 @@ section .btn { margin-top: 32px; }
 .gray .shot { background: #fff; }
 .shot { overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
 .shot img { width: 80%; display: block; }
+.shot svg { width: 100%; height: 100%; font-family: inherit; }
 
 .line { list-style: none; display: flex; justify-content: space-between; margin-top: 64px; position: relative; }
 .line::before { content: ""; position: absolute; top: 18px; left: 10%; right: 10%; height: 2px; background: #e5e8eb; }
