@@ -49,7 +49,7 @@ onMounted(() => {
           <p>활동을 기록하고 분석해요</p>
           <span class="btn">준비 중</span>
         </div>
-        <div class="shot up"></div>
+        <div class="shot up"><img src="/ama.jpg" alt="AMA 캐릭터"></div>
       </div>
     </section>
 
@@ -117,6 +117,8 @@ section .btn { margin-top: 32px; }
 .split.flip > :first-child { order: 2; }
 .shot { aspect-ratio: 4 / 3; border-radius: 24px; background: #e5e8eb; }
 .gray .shot { background: #fff; }
+.shot { overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
+.shot img { width: 80%; display: block; }
 
 .line { list-style: none; display: flex; justify-content: space-between; margin-top: 64px; position: relative; }
 .line::before { content: ""; position: absolute; top: 18px; left: 10%; right: 10%; height: 2px; background: #e5e8eb; }
